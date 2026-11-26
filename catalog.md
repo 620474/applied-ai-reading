@@ -140,7 +140,7 @@ Paradigma Digital · Medium · Oct 29, 2026 · открытый текст · **
 
 > M19 · Неделя 3 · Шаг 03 · Альтернатива M18 · Выборочно, 18 мин. Fixed windows: a surprisingly robust strategy.
 
-Выбери для наглядного сравнения границ фрагментов одной страницы. Сопоставь фиксированное окно с тремя другими стратегиями. Демонстрация на одном документе; M100 сильнее как эмпирическое основание.
+Выбери для наглядного сравнения границ фрагментов одной страницы. Сопоставь фиксированное окно с тремя другими стратегиями. Демонстрация на одном документе; M18 сильнее как эмпирическое основание.
 
 ### M20
 
@@ -336,7 +336,7 @@ EZEKIAS BOKOVE · google-cloud · Oct 28, 2026 · открытый текст ·
 
 [Reason, Act, Observe — Then Forget: tool_trajectory, a New Context Engineering Method for AI Agents](https://michalnasternak.medium.com/reason-act-observe-then-forget-tool-trajectory-a-new-context-engineering-method-for-ai-agents-500fc28b82ab)
 
-Michał Nasternak · reason-act-observe-then-forget-tool-trajectory-a-new-context-engineering-method-for-ai-agents-500fc28b82ab · Sep 25, 2026 · открытый текст · **8.1/10**
+Michał Nasternak · Medium · Sep 25, 2026 · открытый текст · **8.1/10**
 
 > M39 · Неделя 4 · Шаг 08 · Углубление · Выборочно, 14 мин. Evaluation → Limitations.
 
