@@ -4,6 +4,8 @@
 
 ```mermaid
 flowchart TD
+V["M72 · Embeddings"] --> A
+B --> P["M73 или M74 · PDF"]
 X["M25 · Версии документов"] --> A["M17 · Лексический baseline"] --> B["M18 · Границы фрагмента"]
 A --> C["M19 · Визуальное объяснение"]
 B --> D["M20 · Гибридный поиск"]
@@ -15,6 +17,12 @@ F --> G["M26 · Устаревшие данные"]
 ```
 
 ## Неделя 3. Поиск и базы знаний
+
+**Порядок:** [M72](catalog.md#m72) → [M17](catalog.md#m17) → [M18](catalog.md#m18) → [M20](catalog.md#m20) → [M23](catalog.md#m23). Локализовать промах между корпусом, представлением документа, выбором кандидатов и итоговой оценкой ответа. PDF и таблицы — [M73](catalog.md#m73) или [M74](catalog.md#m74). Обновления и удаление — [M25](catalog.md#m25) → [M26](catalog.md#m26) → [M53](catalog.md#m53).
+
+- [M72](catalog.md#m72) · Основа · 15 мин. [Three mistakes when introducing embeddings and vector search](https://bergum.medium.com/four-mistakes-when-introducing-embeddings-and-vector-search-d39478a568c5). Перед M17. Отдели релевантность для пользователя от близости векторов и от того, насколько точно индекс нашёл соседей. Описанные модели относятся к 2023 году.
+- [M73](catalog.md#m73) · Углубление · 20 мин. [RAG retrieval accuracy depends on chunking. I measured how much](https://medium.com/@sankeerthan.kasilingam/rag-retrieval-accuracy-depends-on-chunking-i-measured-how-much-1414cb5ae829). После M18. От The experiment до What it doesn’t fix (yet). На двух документах и 80 вопросах видно, когда найденная строка бесполезна без заголовка колонки. Сравни с причинами промахов на книжном корпусе M18.
+- [M74](catalog.md#m74) · Справочно · 10 мин. [The first step of a multimodal pipeline: which PDF parser keeps the structure?](https://medium.com/@oliver-mlops/the-first-step-of-a-multimodal-pipeline-which-pdf-parser-keeps-the-structure-303a9968e39f). Вместо M73 при выборе парсера. Results и Limits, stated plainly. Сравнение на 16 синтетических PDF измеряет сохранение структуры. Для оценки ответов потребуются поисковые вопросы.
 
 - **[M17](catalog.md#m17) · Основная · 32 мин.** [Building RAG from the Corpus Up, Not the Model Down](https://medium.com/@rf26/building-rag-from-the-corpus-up-not-the-model-down-ac7271325cba). Сопоставь BM25, dense и RRF. Обрезание входа энкодером изменило состав индекса ещё до этапа ранжирования.
 - **[M18](catalog.md#m18) · Основная · 18 мин.** [Which RAG chunking advice survives error bars? Six rules from a held-out test](https://medium.com/@vaishnavi.sonawane.writes/which-rag-chunking-advice-survives-error-bars-six-rules-from-a-held-out-test-82b3ce2c0dfe). Автор разделяет настройку и отложенную проверку. Для промахов различает чужой документ и неподходящий фрагмент правильного документа.

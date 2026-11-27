@@ -448,7 +448,7 @@ Krrish Kumar · Medium · Nov 1, 2026 · открытый текст · **8.7/10
 
 Manish Prasad · Medium · Oct 29, 2026 · Member-only · **8.5/10**
 
-> M49 · Неделя 6 · Шаг 02 · Основная · Выборочно, 32 мин. 14. Observability → 16. Testing.
+> M49 · Неделя 6 · Шаг 02 · Основная · Выборочно, 32 мин. 6. Deduplication → 8. Idempotency, особенно Patterns B–D. 15. Incident playbook — справочно.
 
 Проследи, как различаются повтор исполнения, дедупликация задания и защита внешнего эффекта. Используй разделы сбоев как справочник для Node. Конкретные гарантии зависят от конфигурации Redis и устройства потребителя.
 
@@ -622,3 +622,107 @@ Vatsala Singh · Towards AI · 11 мая 2026 · открытый текст · 
 > M66 · Неделя 8 · После M56 · Справочно · Выборочно, 6 мин. Посмотри формулу свежести и ограничения кеша.
 
 Косинусное сходство уменьшается с возрастом записи вплоть до истечения TTL. Это дополняет трассировку M56 механизмом экономии вызовов. У автора нет измерения доли ложных попаданий, которое подтвердило бы выигрыш на вашем трафике.
+
+### M67
+
+[Rules of Machine Learning](https://developers.google.com/machine-learning/guides/rules-of-ml)
+
+Martin Zinkevich · Google · Основная · Неделя 1 · 10 мин.
+
+Правила 1–4. Выбери простую эвристику и показатель, по которому усложнение оправдает себя. Это метод выбора baseline. Для численного примера на Medium выбери M68.
+
+### M68
+
+[Why Using GPT May Not Be the Best Option for Customer Feedback Classification](https://medium.com/picnic-engineering/why-using-gpt-may-not-be-the-best-option-for-customer-feedback-classification-12e9c36cd4a7)
+
+Maarten Sukel · Picnic Engineering · Альтернатива · Неделя 1 · 15 мин.
+
+Вместо M67 или следом для конкретного примера. Picnic сравнивает TF-IDF, DistilBERT и дообученный GPT-3 на маршрутизации отзывов. Двухдневный эксперимент 2023 года показывает дизайн сравнения. Рейтинг современных моделей требует новых измерений. [Версия команды](https://jobs.picnic.app/en/blogs/why-using-gpt-may-not-be-the-best-option-for-customer-feedback-classification).
+
+### M69
+
+[Cross-validation: evaluating estimator performance](https://scikit-learn.org/stable/modules/cross_validation.html)
+
+scikit-learn · User Guide · Основная · Неделя 2 · 15 мин.
+
+После M10. Прочитай подразделы про GroupKFold и TimeSeriesSplit. Выбери единицу проверки по тому, что встретится после релиза: новый документ, клиент или будущий период. Если нужны и новые группы, и будущие даты, проверь оба ограничения отдельно. Альтернатива на Medium — M70.
+
+### M70
+
+[Your Cross-Validation Score Is a Lie, and Here Are the Five Reasons Why](https://medium.com/data-and-beyond/your-cross-validation-score-is-a-lie-and-here-are-the-five-reasons-why-b464239338d6)
+
+Dima Iakubovskyi · Data And Beyond · Альтернатива · Неделя 2 · 10 мин.
+
+Вместо M69 для начала с примера. В разделе Leak 2 автор сравнивает случайное и групповое разбиение повторных наблюдений. Синтетические идентификаторы показывают механизм утечки. За временным разбиением вернись к M69.
+
+### M71
+
+[Heterogeneous Treatment Effects at Netflix](https://netflixtechblog.medium.com/heterogeneous-treatment-effects-at-netflix-da5c3dd58833)
+
+Scott Seyfarth и соавторы · Netflix · Основная · Неделя 2 · 15 мин.
+
+После M11. Discovery и Deciding Experiments. Разбери, почему число просмотренных сегментов меняет интерпретацию выброса. Масштаб онлайн-тестов Netflix ограничивает перенос на малый eval.
+
+### M72
+
+[Three mistakes when introducing embeddings and vector search](https://bergum.medium.com/four-mistakes-when-introducing-embeddings-and-vector-search-d39478a568c5)
+
+Jo Kristian Bergum · Medium · Основная · Неделя 3 · 15 мин.
+
+Перед M17. Отдели релевантность для пользователя от близости векторов и от того, насколько точно индекс нашёл соседей. Описанные модели относятся к 2023 году.
+
+### M73
+
+[RAG retrieval accuracy depends on chunking. I measured how much](https://medium.com/@sankeerthan.kasilingam/rag-retrieval-accuracy-depends-on-chunking-i-measured-how-much-1414cb5ae829)
+
+Sankeerthan · Medium · Углубление · Неделя 3 · 20 мин.
+
+После M18. От The experiment до What it doesn’t fix (yet). На двух документах и 80 вопросах видно, когда найденная строка бесполезна без заголовка колонки. Сравни с причинами промахов на книжном корпусе M18.
+
+### M74
+
+[The first step of a multimodal pipeline: which PDF parser keeps the structure?](https://medium.com/@oliver-mlops/the-first-step-of-a-multimodal-pipeline-which-pdf-parser-keeps-the-structure-303a9968e39f)
+
+Oliver Faraday · Medium · Справочно · Неделя 3 · 10 мин.
+
+Вместо M73 при выборе парсера. Results и Limits, stated plainly. Сравнение на 16 синтетических PDF измеряет сохранение структуры. Для оценки ответов потребуются поисковые вопросы.
+
+### M75
+
+[Measure LLM Cost Savings: Log Routes, Replay, Catch Drift](https://medium.com/towards-data-engineering/measure-llm-cost-savings-log-routes-replay-catch-drift-a3b15d51d1c7)
+
+Sunny Sharma · Towards Data Engineering · Основная · Неделя 8 · 20 мин.
+
+После M56. The scoreboard и Drift. На 32 вопросах с тремя повторами сравни цену, качество и задержку роутера с одной моделью. Автор подбирал настройки на этих же вопросах. [Открытая версия автора](https://devsdaily.com/measure-llm-cost-savings/).
+
+### M76
+
+[Modernizing the Netflix TV UI Deployment Process](https://netflixtechblog.medium.com/modernizing-the-netflix-tv-ui-deployment-process-28e022edaaef)
+
+Ashley Yung · Netflix · Углубление · Неделя 8 · 15 мин.
+
+После M30. What about A/B-test-based canaries? Проследи решения об остановке раскатки по ошибкам JavaScript и росту памяти. Для LLM дополнительно нужен сигнал качества пользовательской задачи.
+
+### M77
+
+[Return-Aware Experimentation](https://netflixtechblog.medium.com/return-aware-experimentation-3dd93c94b67a)
+
+Simon Ejdemyr и Winston Chou · Netflix · Углубление · Неделя 8 · 10 мин.
+
+После M30 для углубления в эксперименты. Evaluating Decision Rules Across Many Weak Experiments. Раздели данные, на которых выбран победитель, и данные для оценки выгоды этого выбора. Метод опирается на историю экспериментов.
+
+### M78
+
+[Troubleshooting: Abort breaks resumable streams](https://ai-sdk.dev/docs/troubleshooting/abort-breaks-resumable-streams)
+
+AI SDK · Vercel · Справочно · Неделя 6 · 5 мин.
+
+После M49, ветка React. Разбери конфликт отмены и возобновления в useChat. Различай разрыв соединения, остановку генерации и исход внешнего действия. Ограничение относится к этому SDK. Связанный пример на Medium — M79.
+
+### M79
+
+[Why your AI response restarts on page refresh (and what it takes to prevent it)](https://medium.com/@ably_realtime/why-your-ai-response-restarts-on-page-refresh-and-what-it-takes-to-prevent-it-007789615992)
+
+Ably Team · Medium · Справочно · Неделя 6 · 8 мин.
+
+После M49 вместо M78 для устройства потока или следом для сравнения. How resumable streaming actually works объясняет идентификатор ответа, позицию и повторную доставку. Пример иллюстративный, публикация поставщика. Подтверждение внешнего действия см. M49.

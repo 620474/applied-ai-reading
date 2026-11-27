@@ -16,6 +16,8 @@ F --> G
 
 ## Неделя 4. Контекст и инструменты
 
+**Порядок:** [M32](catalog.md#m32) → [M33](catalog.md#m33) → [M34](catalog.md#m34). Разделить контракт модели, обработку ошибки агентом и тест протокола MCP. Для длинной истории — [M36](catalog.md#m36) → [M38](catalog.md#m38).
+
 - **[M32](catalog.md#m32) · Основная · 35 мин.** [LLM System Design Series: 2/12 [Context, Contracts, and Environments]](https://medium.com/models-to-systems/llm-system-design-part-2-context-contracts-and-environments-17c546b123b3). Читать: The problem: three failures a better prompt will not fix → Idea 2: three contracts around every model call.
 - **[M33](catalog.md#m33) · Основная · 24 мин.** [I Built an Agent Loop by Hand. Then I Tried to Migrate It to the OpenAI Agents SDK](https://medium.com/@JohnMandos/i-built-an-agent-loop-by-hand-then-i-tried-to-migrate-it-to-the-openai-agents-sdk-47409209f1e1). Один набор проверок сопровождает перенос ручного цикла в SDK. Отследи, какие ошибки получает сама модель, а какие завершают вызов исключением.
 - **[M34](catalog.md#m34) · Основная · 22 мин.** [Your MCP Server Works in the Inspector. Now Test it in CI](https://medium.com/@dmatoso/your-mcp-server-works-in-the-inspector-now-test-it-in-ci-d4f02bae6d75). Читать: Connect a real client in memory → What this doesn’t test.
@@ -28,6 +30,8 @@ F --> G
 - **[M41](catalog.md#m41) · Справочно · 15 мин.** [Building the Harness Around AI Coding Tools](https://medium.com/data-science-collective/a-blueprint-for-agentic-coding-tools-c1e0e2ed797b). Читать: Level 5.1: Evaluating Skills (Claude Code).
 
 ## Неделя 5. Агент или команда
+
+**Порядок:** [M42](catalog.md#m42) → [M43](catalog.md#m43). Сравнить координацию с независимыми попытками и проследить результат записи во внешней системе. Для проверки вклада компонентов — [M46](catalog.md#m46) → [M44](catalog.md#m44). Если [M42](catalog.md#m42) уже прочитана в начале, переходи к [M43](catalog.md#m43).
 
 - **[M42](catalog.md#m42) · Основная · 15 мин.** [Five agents talking lost to five answers and a vote](https://medium.com/@karthickrajam18/five-agents-talking-lost-to-five-answers-and-a-vote-d15690013740). Читать: The trick hiding in most comparisons → One study shows the whole story.
 - **[M43](catalog.md#m43) · Основная · 36 мин.** [Structuring multi-agent systems around irreversible actions: lessons from tau-bench](https://medium.com/@duttasaswata7/structuring-multi-agent-systems-around-irreversible-actions-lessons-from-tau-bench-defe0f139eda). На tau-airline сравниваются один агент и planner/executor с проверкой записи. Посмотри траектории и разницу между единичным успехом и повторяемостью.
