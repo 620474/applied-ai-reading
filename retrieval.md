@@ -6,17 +6,18 @@
 flowchart TD
 A["M72 · Векторы"] --> B["M25 · Версия"] --> C["M17 · Поиск"]
 C --> D["M18 · Фрагменты"] --> E["M20 → M23 · Диагноз"]
-E --> F["M26 · Проверка удаления"]
+E -.-> F["Неделя 7 · M26 · Проверка удаления"]
 C -.-> V["M80 · Exact и ANN"]
 D -.-> P["M74 → M73 · PDF"]
 F -.-> R["M53 · Отзыв прав"]
+F -.-> K["M66 · Кеш"]
 ```
 
 ## Неделя 3. Поиск и базы знаний
 
-[M72](catalog.md#m72) → [M25](catalog.md#m25) → [M17](catalog.md#m17) → [M18](catalog.md#m18) → [M20](catalog.md#m20) → [M23](catalog.md#m23) → [M26](catalog.md#m26)
+[M72](catalog.md#m72) → [M25](catalog.md#m25) → [M17](catalog.md#m17) → [M18](catalog.md#m18) → [M20](catalog.md#m20) → [M23](catalog.md#m23)
 
-Отследить документ от версии источника до выдачи и проверить исчезновение старого факта. [M80](catalog.md#m80) после [M17](catalog.md#m17) для сравнения exact и ANN. При проблеме PDF после [M18](catalog.md#m18) читай [M74](catalog.md#m74) → [M73](catalog.md#m73). Если выход парсера проверен, достаточно [M73](catalog.md#m73).
+Проследить версии, парсинг, чанкинг, retrieval и ранжирование; удаление и кеш — неделя 7. [M80](catalog.md#m80) после [M17](catalog.md#m17); при PDF [M74](catalog.md#m74) → [M73](catalog.md#m73) после [M18](catalog.md#m18); если парсер проверен, только [M73](catalog.md#m73). [M26](catalog.md#m26) — неделя 7.
 
 ### Основная линия
 
@@ -26,7 +27,6 @@ F -.-> R["M53 · Отзыв прав"]
 - [M18](catalog.md#m18) · Основная · 18 мин. [Which RAG chunking advice survives error bars? Six rules from a held-out test](https://medium.com/@vaishnavi.sonawane.writes/which-rag-chunking-advice-survives-error-bars-six-rules-from-a-held-out-test-82b3ce2c0dfe). Автор разделяет настройку и отложенную проверку. Для промахов различает чужой документ и неподходящий фрагмент правильного документа.
 - [M20](catalog.md#m20) · Основная · 20 мин. [I Added Hybrid Search to My Retrieval Pipeline. It Made Things Worse.](https://medium.com/@aashiesh.siwach/i-added-hybrid-search-to-my-retrieval-pipeline-heres-why-it-backfired-5904a267fb95). На подмножестве MS MARCO добавление BM25 к dense понизило MAP@5; последующий reranker изменил вывод. Проследи вклад каждого этапа.
 - [M23](catalog.md#m23) · Основная · 25 мин. [Evaluation-first RAG: what happened when my own metrics lied to me](https://medium.com/@ing.fernandosanabria/evaluation-first-rag-what-happened-when-my-own-metrics-lied-to-me-6810744f88ec). Read-only rank probes → When the measurement apparatus lied.
-- [M26](catalog.md#m26) · Основная · 12 мин. [How to Detect RAG Index Drift: Deleted Docs, Stale Chunks, and Duplicate Embeddings](https://medium.com/oracledevs/how-to-detect-rag-index-drift-deleted-docs-stale-chunks-and-duplicate-embeddings-5b5a21cc9244). Which regression test catches the most important failure?.
 
 ### По интересу
 

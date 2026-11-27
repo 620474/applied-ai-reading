@@ -4,7 +4,7 @@
 
 ```mermaid
 flowchart TD
-A["M32 · Контракты"] --> B["M34 · MCP"]
+A["M32 · Контракты"] --> K["M36 → M37 · Контекст"] --> B["M34 · MCP"]
 A -.-> C["M33 · Миграция SDK"]
 B --> D["M42 · Попытки"] --> E["M43 · Траектории"] --> F["M46 · Вклад компонентов"]
 F -.-> G["M44 · Расходы"]
@@ -12,21 +12,21 @@ F -.-> G["M44 · Расходы"]
 
 ## Неделя 4. Контекст и инструменты
 
-[M32](catalog.md#m32) → [M34](catalog.md#m34)
+[M32](catalog.md#m32) → [M36](catalog.md#m36) → [M37](catalog.md#m37) → [M34](catalog.md#m34)
 
-Различить ошибку выбора инструмента, нарушение контракта и сбой протокола. [M33](catalog.md#m33) при миграции SDK. [M36](catalog.md#m36) → [M38](catalog.md#m38) для длинной истории.
+Различить сбой модели, контракта и протокола; управлять длинной историей и потерей контекста. [M33](catalog.md#m33) при миграции SDK; [M35](catalog.md#m35) для TypeScript MCP; [M38](catalog.md#m38)–[M40](catalog.md#m40) для кеша, траекторий и памяти.
 
 ### Основная линия
 
 - [M32](catalog.md#m32) · Основная · 35 мин. [LLM System Design Series: 2/12 [Context, Contracts, and Environments]](https://medium.com/models-to-systems/llm-system-design-part-2-context-contracts-and-environments-17c546b123b3). The problem: three failures a better prompt will not fix → Idea 2: three contracts around every model call.
+- [M36](catalog.md#m36) · Основная · 12 мин. [Are LLM’s Ignoring Half our Context — Experimentations on My Laptop](https://medium.com/@bharani3ran/are-llms-ignoring-half-our-context-experimentations-on-my-laptop-7fd6b33127ce). сравнение попаданий при перестановке факта внутри контекста.
+- [M37](catalog.md#m37) · Основная · 20 мин. [I Treated an AI Agent’s Context Window Like a Garbage-Collected Heap. Here’s What Survived.](https://medium.com/@ai.in.cz/i-treated-an-ai-agents-context-window-like-a-garbage-collected-heap-here-s-what-survived-77380afe1439). Finding 1: The stub matters more than the collector → What didn’t work.
 - [M34](catalog.md#m34) · Основная · 22 мин. [Your MCP Server Works in the Inspector. Now Test it in CI](https://medium.com/@dmatoso/your-mcp-server-works-in-the-inspector-now-test-it-in-ci-d4f02bae6d75). Connect a real client in memory → What this doesn’t test.
 
 ### По интересу
 
 - [M33](catalog.md#m33) · Справочно · 24 мин. [I Built an Agent Loop by Hand. Then I Tried to Migrate It to the OpenAI Agents SDK](https://medium.com/@JohnMandos/i-built-an-agent-loop-by-hand-then-i-tried-to-migrate-it-to-the-openai-agents-sdk-47409209f1e1). Один набор проверок сопровождает перенос ручного цикла в SDK. Отследи, какие ошибки получает сама модель, а какие завершают вызов исключением.
 - [M35](catalog.md#m35) · Справочно · 12 мин. [Build the Same MCP Server in TypeScript with the MCP SDK v2 (@modelcontextprotocol/server)](https://medium.com/@nandanpriyadarshi/build-the-same-mcp-server-in-typescript-with-the-mcp-sdk-v2-modelcontextprotocol-server-a8e4c520c965). What failed first → Limits.
-- [M36](catalog.md#m36) · Углубление · 12 мин. [Are LLM’s Ignoring Half our Context — Experimentations on My Laptop](https://medium.com/@bharani3ran/are-llms-ignoring-half-our-context-experimentations-on-my-laptop-7fd6b33127ce). сравнение попаданий при перестановке факта внутри контекста.
-- [M37](catalog.md#m37) · Углубление · 20 мин. [I Treated an AI Agent’s Context Window Like a Garbage-Collected Heap. Here’s What Survived.](https://medium.com/@ai.in.cz/i-treated-an-ai-agents-context-window-like-a-garbage-collected-heap-here-s-what-survived-77380afe1439). Finding 1: The stub matters more than the collector → What didn’t work.
 - [M38](catalog.md#m38) · Углубление · 22 мин. [What caching does for an LLM agent ?](https://medium.com/google-cloud/what-caching-does-for-an-llm-agent-f254686e0b14). The big test: how should an agent remember? → What this does not show.
 - [M39](catalog.md#m39) · Углубление · 14 мин. [Reason, Act, Observe — Then Forget: tool_trajectory, a New Context Engineering Method for AI Agents](https://michalnasternak.medium.com/reason-act-observe-then-forget-tool-trajectory-a-new-context-engineering-method-for-ai-agents-500fc28b82ab). Evaluation → Limitations.
 - [M40](catalog.md#m40) · Углубление · 18 мин. [MemEval: Benchmarking Memory for AI Agents](https://medium.com/prosus-ai-tech-blog/memeval-benchmarking-memory-for-ai-agents-932d3fd9f3b4). Benchmark Results → What We Chose Not to Build.

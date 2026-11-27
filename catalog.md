@@ -1,6 +1,6 @@
 # Каталог статей
 
-ID сохраняется между редакциями. Оценки редакторские по пяти критериям: глубина 30%, опыт 25%, оригинальность 20%, доказательства 15%, плотность 10%. Минуты рассчитаны на указанное чтение с разбором примеров. Платные статьи проверялись в авторизованной сессии. Цифры экспериментов принадлежат авторам.
+ID сохраняется между редакциями. Оценки редакторские по пяти критериям: глубина 30%, опыт 25%, оригинальность 20%, доказательства 15%, плотность 10%. Минуты рассчитаны на указанное чтение с разбором примеров. Ранее отобранные платные статьи проверялись в авторизованной сессии. Для M67–M88 отсутствующие метаданные и оценки не выдумываются; новые открытые учебные источники проверены по указанным разделам, не по всей публикации. Цифры экспериментов принадлежат авторам.
 
 ### M06
 
@@ -208,11 +208,14 @@ Marcia Rodrigues · Medium · Nov 17, 2026 · открытый текст · **8
 
 Anya Summers · oracledevs · Jul 29, 2026 · открытый текст · **8.2/10**
 
-> M26 · Неделя 3 · Основная · Выборочно, 12 мин. Which regression test catches the most important failure?.
+> M26 · Неделя 7 · Основная · Выборочно, 12 мин. Which regression test catches the most important failure?.
 
 После удаления или замены документа проверь выдачу top-k по старому факту. Успех фоновой задачи не доказывает актуальность поиска. Разбор с примерами Oracle; понадобится своё отображение версий и удаления.
 
 Если документ отозван у конкретного пользователя, продолжи в M53.
+
+После M23 продолжи на неделе 7. Семантический кеш — [M66](#m66); обновление индекса само по себе не инвалидирует ответ. Проверяй версию источника, область доступа и политику кеша.
+
 
 ### M27
 
@@ -310,7 +313,7 @@ Nandan Priyadarshi · Medium · Oct 27, 2026 · открытый текст · *
 
 Bharanitharan Raghunathan · Medium · Mar 29, 2026 · открытый текст · **8.1/10**
 
-> M36 · Неделя 4 · Углубление · Бегло, 12 мин. сравнение попаданий при перестановке факта внутри контекста.
+> M36 · Неделя 4 · Основная · Бегло, 12 мин. сравнение попаданий при перестановке факта внутри контекста.
 
 Локальный пример эффекта позиции помогает отделить наличие факта во входе от его использования моделью. Небольшой локальный тест; качество конкретного приложения требует отдельной проверки.
 
@@ -320,7 +323,7 @@ Bharanitharan Raghunathan · Medium · Mar 29, 2026 · открытый текс
 
 Sergiu N · Medium · Nov 19, 2026 · открытый текст · **8.6/10**
 
-> M37 · Неделя 4 · Углубление · Выборочно, 20 мин. Finding 1: The stub matters more than the collector → What didn’t work.
+> M37 · Неделя 4 · Основная · Выборочно, 20 мин. Finding 1: The stub matters more than the collector → What didn’t work.
 
 В сравнении стратегий очистки меняется и отметка, оставленная на месте удалённого сообщения. Она способна менять дальнейшее поведение агента. Одна модель; измерения включают конкретный набор задач автора.
 
@@ -628,17 +631,21 @@ Vatsala Singh · Towards AI · 11 мая 2026 · открытый текст · 
 
 [Rules of Machine Learning](https://developers.google.com/machine-learning/guides/rules-of-ml)
 
-Martin Zinkevich · Google · Углубление · Неделя 1 · 10 мин.
+Martin Zinkevich · Google · обновляемый документ · открытый доступ · оценка не присвоена
+
+> M67 · Неделя 1 · Основная · Выборочно, 10 мин.
 
 Правила 1–4. Выбери простую эвристику и показатель, по которому усложнение оправдает себя. Это метод выбора baseline. Для численного примера на Medium выбери M68.
 
-Перед M68, когда выбираешь между правилами и ML.
+Перед M68 — обязательный старт.
 
 ### M68
 
 [Why Using GPT May Not Be the Best Option for Customer Feedback Classification](https://medium.com/picnic-engineering/why-using-gpt-may-not-be-the-best-option-for-customer-feedback-classification-12e9c36cd4a7)
 
-Maarten Sukel · Picnic Engineering · Основная · Неделя 1 · 15 мин.
+Maarten Sukel · Picnic Engineering · дата: уточнить · доступ: уточнить · оценка не присвоена
+
+> Неделя 1 · Основная · 15 мин.
 
 Picnic сравнивает TF-IDF, DistilBERT и дообученный GPT-3 на маршрутизации отзывов. Двухдневный эксперимент 2023 года показывает дизайн сравнения. Рейтинг современных моделей требует новых измерений. [Версия команды](https://jobs.picnic.app/en/blogs/why-using-gpt-may-not-be-the-best-option-for-customer-feedback-classification).
 
@@ -648,7 +655,9 @@ Picnic сравнивает TF-IDF, DistilBERT и дообученный GPT-3 �
 
 [Cross-validation: evaluating estimator performance](https://scikit-learn.org/stable/modules/cross_validation.html)
 
-scikit-learn · User Guide · Основная · Неделя 2 · 15 мин.
+scikit-learn · User Guide · дата: уточнить · доступ: уточнить · оценка не присвоена
+
+> Неделя 2 · Основная · 15 мин.
 
 Прочитай подразделы про GroupKFold и TimeSeriesSplit. Выбери единицу проверки по тому, что встретится после релиза: новый документ, клиент или будущий период. Если нужны и новые группы, и будущие даты, проверь оба ограничения отдельно. Пример группового разбиения на Medium — M70.
 
@@ -658,7 +667,9 @@ scikit-learn · User Guide · Основная · Неделя 2 · 15 мин.
 
 [Your Cross-Validation Score Is a Lie, and Here Are the Five Reasons Why](https://medium.com/data-and-beyond/your-cross-validation-score-is-a-lie-and-here-are-the-five-reasons-why-b464239338d6)
 
-Dima Iakubovskyi · Data And Beyond · Углубление · Неделя 2 · 10 мин.
+Dima Iakubovskyi · Data And Beyond · дата: уточнить · доступ: уточнить · оценка не присвоена
+
+> Неделя 2 · Углубление · 10 мин.
 
 В разделе Leak 2 автор сравнивает случайное и групповое разбиение повторных наблюдений. Синтетические идентификаторы показывают механизм утечки. За временным разбиением вернись к M69.
 
@@ -668,7 +679,9 @@ Dima Iakubovskyi · Data And Beyond · Углубление · Неделя 2 ·
 
 [Heterogeneous Treatment Effects at Netflix](https://netflixtechblog.medium.com/heterogeneous-treatment-effects-at-netflix-da5c3dd58833)
 
-Scott Seyfarth и соавторы · Netflix · Основная · Неделя 2 · 15 мин.
+Scott Seyfarth и соавторы · Netflix · дата: уточнить · доступ: уточнить · оценка не присвоена
+
+> Неделя 2 · Основная · 15 мин.
 
 После M11. Discovery и Deciding Experiments. Разбери, почему число просмотренных сегментов меняет интерпретацию выброса. Масштаб онлайн-тестов Netflix ограничивает перенос на малый eval.
 
@@ -678,7 +691,9 @@ Scott Seyfarth и соавторы · Netflix · Основная · Недел�
 
 [Three mistakes when introducing embeddings and vector search](https://bergum.medium.com/four-mistakes-when-introducing-embeddings-and-vector-search-d39478a568c5)
 
-Jo Kristian Bergum · Medium · Основная · Неделя 3 · 15 мин.
+Jo Kristian Bergum · Medium · дата: уточнить · доступ: уточнить · оценка не присвоена
+
+> Неделя 3 · Основная · 15 мин.
 
 Перед M17. Отдели релевантность для пользователя от близости векторов и от того, насколько точно индекс нашёл соседей. Описанные модели относятся к 2023 году.
 
@@ -688,7 +703,9 @@ Jo Kristian Bergum · Medium · Основная · Неделя 3 · 15 мин.
 
 [RAG retrieval accuracy depends on chunking. I measured how much](https://medium.com/@sankeerthan.kasilingam/rag-retrieval-accuracy-depends-on-chunking-i-measured-how-much-1414cb5ae829)
 
-Sankeerthan · Medium · Углубление · Неделя 3 · 20 мин.
+Sankeerthan · Medium · дата: уточнить · доступ: уточнить · оценка не присвоена
+
+> Неделя 3 · Углубление · 20 мин.
 
 После M18. От The experiment до What it doesn’t fix (yet). На двух документах и 80 вопросах видно, когда найденная строка бесполезна без заголовка колонки. Сравни с причинами промахов на книжном корпусе M18.
 
@@ -696,7 +713,9 @@ Sankeerthan · Medium · Углубление · Неделя 3 · 20 мин.
 
 [The first step of a multimodal pipeline: which PDF parser keeps the structure?](https://medium.com/@oliver-mlops/the-first-step-of-a-multimodal-pipeline-which-pdf-parser-keeps-the-structure-303a9968e39f)
 
-Oliver Faraday · Medium · Справочно · Неделя 3 · 10 мин.
+Oliver Faraday · Medium · дата: уточнить · доступ: уточнить · оценка не присвоена
+
+> Неделя 3 · Справочно · 10 мин.
 
 Results и Limits, stated plainly. Сравнение на 16 синтетических PDF измеряет сохранение структуры. Для оценки ответов потребуются поисковые вопросы.
 
@@ -706,7 +725,9 @@ Results и Limits, stated plainly. Сравнение на 16 синтетиче
 
 [Measure LLM Cost Savings: Log Routes, Replay, Catch Drift](https://medium.com/towards-data-engineering/measure-llm-cost-savings-log-routes-replay-catch-drift-a3b15d51d1c7)
 
-Sunny Sharma · Towards Data Engineering · Основная · Неделя 8 · 20 мин.
+Sunny Sharma · Towards Data Engineering · дата: уточнить · доступ: уточнить · оценка не присвоена
+
+> Неделя 8 · Основная · 20 мин.
 
 После M56. The scoreboard и Drift. На 32 вопросах с тремя повторами сравни цену, качество и задержку роутера с одной моделью. Автор подбирал настройки на этих же вопросах. [Открытая версия автора](https://devsdaily.com/measure-llm-cost-savings/).
 
@@ -716,7 +737,9 @@ Sunny Sharma · Towards Data Engineering · Основная · Неделя 8 �
 
 [Modernizing the Netflix TV UI Deployment Process](https://netflixtechblog.medium.com/modernizing-the-netflix-tv-ui-deployment-process-28e022edaaef)
 
-Ashley Yung · Netflix · Основная · Неделя 8 · 15 мин.
+Ashley Yung · Netflix · дата: уточнить · доступ: уточнить · оценка не присвоена
+
+> Неделя 8 · Основная · 15 мин.
 
 После M75. What about A/B-test-based canaries? Проследи решения об остановке раскатки по ошибкам JavaScript и росту памяти. Для LLM дополнительно нужен сигнал качества пользовательской задачи.
 
@@ -724,7 +747,9 @@ Ashley Yung · Netflix · Основная · Неделя 8 · 15 мин.
 
 [Return-Aware Experimentation](https://netflixtechblog.medium.com/return-aware-experimentation-3dd93c94b67a)
 
-Simon Ejdemyr и Winston Chou · Netflix · Углубление · Неделя 8 · 10 мин.
+Simon Ejdemyr и Winston Chou · Netflix · дата: уточнить · доступ: уточнить · оценка не присвоена
+
+> Неделя 8 · Углубление · 10 мин.
 
 После M76 для углубления в эксперименты. Evaluating Decision Rules Across Many Weak Experiments. Раздели данные, на которых выбран победитель, и данные для оценки выгоды этого выбора. Метод опирается на историю экспериментов.
 
@@ -732,7 +757,9 @@ Simon Ejdemyr и Winston Chou · Netflix · Углубление · Неделя
 
 [Troubleshooting: Abort breaks resumable streams](https://ai-sdk.dev/docs/troubleshooting/abort-breaks-resumable-streams)
 
-AI SDK · Vercel · Основная · Неделя 6 · 5 мин.
+AI SDK · Vercel · дата: уточнить · доступ: уточнить · оценка не присвоена
+
+> Неделя 6 · Основная · 5 мин.
 
 После M81. Разбери конфликт отмены и возобновления в useChat. Различай разрыв соединения, остановку генерации и исход внешнего действия. Ограничение относится к этому SDK. Связанный пример на Medium — M79.
 
@@ -740,7 +767,9 @@ AI SDK · Vercel · Основная · Неделя 6 · 5 мин.
 
 [Why your AI response restarts on page refresh (and what it takes to prevent it)](https://medium.com/@ably_realtime/why-your-ai-response-restarts-on-page-refresh-and-what-it-takes-to-prevent-it-007789615992)
 
-Ably Team · Medium · Основная · Неделя 6 · 8 мин.
+Ably Team · Medium · дата: уточнить · доступ: уточнить · оценка не присвоена
+
+> Неделя 6 · Основная · 8 мин.
 
 После M78. How resumable streaming actually works объясняет идентификатор ответа, позицию и повторную доставку. Пример иллюстративный, публикация поставщика. Подтверждение внешнего действия см. M49.
 
@@ -750,7 +779,9 @@ Ably Team · Medium · Основная · Неделя 6 · 8 мин.
 
 [Accelerating Transformer-based Embedding Retrieval with Vespa](https://blog.vespa.ai/accelerating-transformer-based-embedding-retrieval-with-vespa/)
 
-Jo Kristian Bergum · Vespa Blog · Углубление · Неделя 3 · 15 мин.
+Jo Kristian Bergum · Vespa Blog · дата: уточнить · доступ: уточнить · оценка не присвоена
+
+> Неделя 3 · Углубление · 15 мин.
 
 После M17. Прочитай два раздела Putting it all together про точный поиск и HNSW. На одном корпусе MIRACL сопоставь nDCG@10 и p95 при одинаковом числе клиентов. Совпадение качества по разметке ещё допускает различия в найденных соседях. M72 на Medium объясняет механизм. Числа привязаны к конфигурации стенда.
 
@@ -758,6 +789,71 @@ Jo Kristian Bergum · Vespa Blog · Углубление · Неделя 3 · 15
 
 [Making agent retries safe across timeouts and restarts](https://dev.to/deavgprime/making-agent-retries-safe-across-timeouts-and-restarts-448b)
 
-deavgprime · DEV Community · Основная · Неделя 6 · 15 мин.
+deavgprime · DEV Community · дата: уточнить · доступ: уточнить · оценка не присвоена
+
+> Неделя 6 · Основная · 15 мин.
 
 После M49, перед M78. От A key did not fix the split transaction до How long does the protection last? В локальном стенде с двумя SQLite-базами автор считал созданные заказы при потерянных ответах и рестартах. Проверь, когда вместе фиксируются действие и квитанция, сколько хранится ключ и какой исход может подтвердить клиент. Близкий материал на Medium — раздел 8 в M49. Затем M78 и M79 показывают последствия для интерфейса.
+
+
+### M82
+
+[Deep dive into Text Generation Inference with LLMs](https://huggingface.co/docs/course/chapter1/8)
+
+Hugging Face · LLM Course · обновляемый курс · открытый текст · оценка не присвоена (новый учебный источник)
+
+> M82 · Неделя 1 · Основная · Выборочно, 20 мин. Prefill, Decode, Sampling Strategies. Токенизация, autoregressive decoding, logits, temperature, top-p/top-k. Logits — ненормированные оценки, а не вероятности; greedy и temperature=0 не гарантируют идентичность между версиями API. Перед M06.
+
+
+### M83
+
+[Reasoning best practices](https://developers.openai.com/api/docs/guides/reasoning-best-practices)
+
+OpenAI · документация · обновляемая · открытый текст · оценка не присвоена (новый учебный источник)
+
+> M83 · Неделя 1 · Основная · Выборочно, 15 мин. Разделы о выборе reasoning-моделей и сочетании моделей. Сравни обычную и reasoning-модель на одинаковых задачах с фиксированными бюджетами и измерением качества, цены, p95. Примеры поставщика не являются независимым сравнением. После M07; M08 и M75 — продолжение.
+
+
+### M84
+
+[Post-tuning the decision threshold for cost-sensitive learning](https://scikit-learn.org/stable/auto_examples/model_selection/plot_cost_sensitive_learning.html)
+
+scikit-learn · документация · обновляемая · открытый текст · оценка не присвоена (новый учебный источник)
+
+> M84 · Неделя 1 · Основная · Выборочно, 15 мин. Cost-sensitive learning with constant gains and costs. Сопоставь FP/FN с потерями бизнеса, подбирай порог на validation, проверяй на held-out данных. Для вероятностного порога нужна калибровка; самооценка уверенности LLM не является калиброванной вероятностью. После M68.
+
+
+### M85
+
+[Evaluation of LLM systems — статистика сравнения](https://mseyfi.github.io/llm-vlm/applications/evaluation-of-llm-systems.html)
+
+LLM and VLM course · учебная глава · дата не установлена · открытый текст · оценка не присвоена (новый учебный источник)
+
+> M85 · Неделя 2 · Основная · Выборочно, 25 мин. Small test sets, paired comparisons, How many items do you need? Wilson для отдельной доли, exact McNemar для парного бинарного сравнения, paired bootstrap для разницы метрик; ресэмплируй независимые группы. Заранее задай допустимую регрессию и критические дефекты; незначимый результат не доказывает эквивалентность. После M71. [Первоисточник по error bars](https://arxiv.org/abs/2411.00640).
+
+
+### M86
+
+[The lethal trifecta for AI agents: private data, untrusted content, and external communication](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/)
+
+Simon Willison · блог · 16 июня 2025 · открытый текст · оценка не присвоена (новый учебный источник)
+
+> M86 · Неделя 7 · Основная · Целиком, 15 мин. Прочитай целиком. Различай prompt injection и jailbreak; внешние документы — недоверенные данные. Ограничивай чтение и отправку данных, полномочия инструментов и сетевые назначения вне модели. Подтверждение опасного действия дополняет, но не заменяет ограничения. После M53.
+
+
+### M87
+
+[Optimizing Customer Support Agents for Cost and Quality](https://developers.openai.com/cookbook/examples/agent_optimization/optimizing_agents_for_cost_and_quality)
+
+OpenAI Cookbook · дата не установлена · открытый текст · оценка не присвоена (новый учебный источник)
+
+> M87 · Неделя 8 · Основная · Выборочно, 25 мин. Выборочно: blended cost per verified resolution, Define success before optimizing, Track the complete support workflow, Demo limitation. Разделяй автономное решение, помощь человека, открытый тикет и повторное обращение; учитывай расходы неуспешных попыток, ретраи, fallback, ручную работу и p95. Это учебная симуляция, не production-инцидент. После M75.
+
+
+### M88
+
+[AI Evals FAQ — production monitoring → CI dataset](https://hamel.dev/blog/posts/evals-faq/how-are-evaluations-used-differently-in-cicd-vs-monitoring-production.html)
+
+Hamel Husain / Shreya Shankar · AI Evals FAQ · обновляемая · открытый текст · оценка не присвоена (новый учебный источник)
+
+> M88 · Неделя 8 · Основная · Выборочно, 15 мин. Прочитай FAQ о CI vs production и [sampling production traces](https://hamel.dev/blog/posts/evals-faq/how-can-i-efficiently-sample-production-traces-for-review.html). Сочетай случайную и целевую выборки, размечай причины сбоев, добавляй репрезентативные случаи в регрессионный набор, версионируй golden set и оставляй независимый holdout. После M76.

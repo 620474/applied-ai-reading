@@ -6,8 +6,8 @@
 flowchart TD
 A["M48 → M49 · Намерение и повтор"] --> B["M81 · Исход неизвестен"] --> C["M78 → M79 · Интерфейс"]
 A -.-> X["M50 · Replay"]
-C --> D["M52 → M53 · Полномочия"] --> E["M56 · Трасса"]
-E --> F["M75 · Цена и качество"] --> G["M76 · Раскатка"]
+C --> D["M26 → M52 → M53 → M86 · Свежесть, права и безопасность"] --> E["M56 · Трасса"]
+E --> F["M75 → M87 · Цена и качество"] --> G["M76 · Раскатка"] --> J["M88 · Feedback loop"]
 G -.-> H["M30 · Ранжирование"]
 G -.-> I["M77 · Правило выпуска"]
 ```
@@ -31,16 +31,18 @@ G -.-> I["M77 · Правило выпуска"]
 - [M50](catalog.md#m50) · Справочно · 20 мин. [Deploying new Temporal workflow code while workflows are running](https://medium.com/@kalin.dimitrov93/deploying-new-temporal-workflow-code-while-workflows-are-running-a9ff9a62cfbd). Посмотри, как несовместимое изменение workflow ведёт себя после рестарта и при rolling deploy. История событий объясняет разницу.
 - [M51](catalog.md#m51) · Углубление · 25 мин. [Durable Workflows at Angel One: Running Temporal as an Managed Platform](https://medium.com/angel-tech/durable-workflows-at-angel-one-running-temporal-as-an-managed-platform-d4f9acdfd9ee). Three ways to solve it → What we learned.
 
-## Неделя 7. Полномочия
+## Неделя 7. Безопасность, полномочия и актуальность
 
-[M52](catalog.md#m52) → [M53](catalog.md#m53)
+[M26](catalog.md#m26) → [M52](catalog.md#m52) → [M53](catalog.md#m53) → [M86](catalog.md#m86)
 
-Проверить полномочия во время исполнения и видимость документа после отзыва доступа. Вернись к [M26](catalog.md#m26) при отзыве источника. [M54](catalog.md#m54) для подтверждения действий.
+Проверить удаление источника, кеш, отзыв прав и границы доверия при prompt injection. [M54](catalog.md#m54) для approval gateway; [M66](catalog.md#m66) при семантическом кеше.
 
 ### Основная линия
 
+- [M26](catalog.md#m26) · Основная · 12 мин. [How to Detect RAG Index Drift: Deleted Docs, Stale Chunks, and Duplicate Embeddings](https://medium.com/oracledevs/how-to-detect-rag-index-drift-deleted-docs-stale-chunks-and-duplicate-embeddings-5b5a21cc9244). Which regression test catches the most important failure?. После M23 (неделя 3); если ответы кешируются, проверь [M66](catalog.md#m66) и версии источников, прав и политики.
 - [M52](catalog.md#m52) · Основная · 28 мин. [Propagating User Identity Through an Agentic Workflow](https://medium.com/mongodb/propagating-user-identity-through-an-agentic-workflow-d19dff24e54c). Сравни учётную запись агента, передачу токена пользователя и делегирование. Проследи, какую личность видит downstream-сервис при отложенном действии.
 - [M53](catalog.md#m53) · Основная · 16 мин. [How do you make an AI assistant respect document permissions on Databricks?](https://medium.com/@raghavmatta/how-do-you-make-an-ai-assistant-respect-document-permissions-f4a18336cc3a). Does a live permission change actually flow through?.
+- [M86](catalog.md#m86) · Основная · 15 мин. [The lethal trifecta for AI agents: private data, untrusted content, and external communication](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/). Прочитай целиком. Различай prompt injection и jailbreak; внешние документы — недоверенные данные. Ограничивай чтение и отправку данных, полномочия инструментов и сетевые назначения вне модели. Подтверждение опасного действия дополняет, но не заменяет ограничения. После M53.
 
 ### По интересу
 
@@ -48,15 +50,19 @@ G -.-> I["M77 · Правило выпуска"]
 
 ## Неделя 8. Эксплуатация
 
-[M56](catalog.md#m56) → [M75](catalog.md#m75) → [M76](catalog.md#m76)
+[M56](catalog.md#m56) → [M75](catalog.md#m75) → [M87](catalog.md#m87) → [M76](catalog.md#m76) → [M88](catalog.md#m88)
 
-Связать трассу с качеством, затратами и задержкой. Определить условия паузы и отката. После [M76](catalog.md#m76) выбери [M30](catalog.md#m30) для ранжирования или [M77](catalog.md#m77) для анализа правил выпуска. [M58](catalog.md#m58) → [M57](catalog.md#m57) для собственного inference.
+Связать трассы, офлайн-качество, цену подтверждённого результата и rollout; замкнуть feedback loop. [M30](catalog.md#m30), [M77](catalog.md#m77) для экспериментов; [M58](catalog.md#m58) → [M57](catalog.md#m57) для своего inference; [M62](catalog.md#m62)–[M64](catalog.md#m64) для fine-tuning.
+
+**Границы:** M75 — офлайн; M87 — симуляция; M76 — технические канарейки, а не доказательство качества LLM в production.
 
 ### Основная линия
 
 - [M56](catalog.md#m56) · Основная · 28 мин. [LLM Observability: Traces, Tokens and Costs of Agentic App](https://medium.com/@khwajakhan/llm-observability-traces-tokens-and-cost-on-a-frozen-agentic-app-e0a3b9e2c790). Datasets & experiments — eval runs with observability context.
 - [M75](catalog.md#m75) · Основная · 20 мин. [Measure LLM Cost Savings: Log Routes, Replay, Catch Drift](https://medium.com/towards-data-engineering/measure-llm-cost-savings-log-routes-replay-catch-drift-a3b15d51d1c7). После M56. The scoreboard и Drift. На 32 вопросах с тремя повторами сравни цену, качество и задержку роутера с одной моделью. Автор подбирал настройки на этих же вопросах. [Открытая версия автора](https://devsdaily.com/measure-llm-cost-savings/). Для продуктовой проверки зафиксируй когорту и окно наблюдения. Раздели расходы всех попыток, включая неудачи и ручную обработку, на число подтверждённых пользовательских успехов. Отдельно покажи незавершённые задачи и повторные обращения. Офлайн-метрика $ per correct использует другой критерий успеха.
+- [M87](catalog.md#m87) · Основная · 25 мин. [Optimizing Customer Support Agents for Cost and Quality](https://developers.openai.com/cookbook/examples/agent_optimization/optimizing_agents_for_cost_and_quality). Выборочно: blended cost per verified resolution, Define success before optimizing, Track the complete support workflow, Demo limitation. Разделяй автономное решение, помощь человека, открытый тикет и повторное обращение; учитывай расходы неуспешных попыток, ретраи, fallback, ручную работу и p95. Это учебная симуляция, не production-инцидент. После M75.
 - [M76](catalog.md#m76) · Основная · 15 мин. [Modernizing the Netflix TV UI Deployment Process](https://netflixtechblog.medium.com/modernizing-the-netflix-tv-ui-deployment-process-28e022edaaef). После M75. What about A/B-test-based canaries? Проследи решения об остановке раскатки по ошибкам JavaScript и росту памяти. Для LLM дополнительно нужен сигнал качества пользовательской задачи.
+- [M88](catalog.md#m88) · Основная · 15 мин. [AI Evals FAQ — production monitoring → CI dataset](https://hamel.dev/blog/posts/evals-faq/how-are-evaluations-used-differently-in-cicd-vs-monitoring-production.html). Прочитай FAQ о CI vs production и [sampling production traces](https://hamel.dev/blog/posts/evals-faq/how-can-i-efficiently-sample-production-traces-for-review.html). Сочетай случайную и целевую выборки, размечай причины сбоев, добавляй репрезентативные случаи в регрессионный набор, версионируй golden set и оставляй независимый holdout. После M76.
 
 ### По интересу
 
