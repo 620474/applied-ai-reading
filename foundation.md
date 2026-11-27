@@ -6,8 +6,9 @@
 flowchart TD
 A["M06 · Схема"] --> B["M07 · Фактическая точность"]
 B --> C["M10 · Evals"]
-C --> D["M12 · Подсказка судье"]
-C --> E["M13 · Позиция аргумента"]
+C --> X["M11 · Регрессии по срезам"]
+X --> D["M12 · Подсказка судье"]
+X --> E["M13 · Позиция аргумента"]
 D --> F["M17 · Поиск"]
 E --> F
 ```
@@ -22,7 +23,7 @@ E --> F
 ## Неделя 2. Оценка качества
 
 - **[M10](catalog.md#m10) · Основная · 48 мин.** [Part 14: Evals — Knowing Whether Scout Is Any Good](https://medium.com/models-to-systems/part-14-evals-knowing-whether-scout-is-any-good-0155ff1d4723). Сценарии с устаревшими фактами, отсутствующим ответом и плохими цитатами выявляют регрессии, которые скрывает среднее. Отдельный тест проверяет сам оценщик.
-- **[M11](catalog.md#m11) · Углубление · 7 мин.** [A 91% eval pass rate shipped our worst regression. We gate on the delta now.](https://medium.com/@ethan-writes-AI/a-91-eval-pass-rate-shipped-our-worst-regression-we-gate-on-the-delta-now-ef52d6613f6f). Общий pass rate прошёл порог, хотя конкретные типы запросов сломались. Сравни изменения на тех же примерах.
+- **[M11](catalog.md#m11) · Основная · 7 мин.** [A 91% eval pass rate shipped our worst regression. We gate on the delta now.](https://medium.com/@ethan-writes-AI/a-91-eval-pass-rate-shipped-our-worst-regression-we-gate-on-the-delta-now-ef52d6613f6f). Общий pass rate прошёл порог, хотя конкретные типы запросов сломались. Сравни изменения на тех же примерах.
 - **[M12](catalog.md#m12) · Основная · 25 мин.** [LLMs as Judges: Measuring Bias, Hinting Effects, and Tier Preferences](https://medium.com/google-developer-experts/llms-as-judges-measuring-bias-hinting-effects-and-tier-preferences-8096a9114433). Читать: Problem Setup → Experiment 3 : Hinting Effect.
 - **[M13](catalog.md#m13) · Альтернатива M12 · 20 мин.** [Who Wins — Opening Arguments or Closing Statements? An LLM Judge’s Position Bias](https://medium.com/ai4q/who-wins-opening-arguments-or-closing-statements-an-llm-judges-position-bias-38ab7b313d63). Читать: Бегло: таблицы результатов для двух положений аргумента.
 - **[M14](catalog.md#m14) · Углубление · 15 мин.** [Can LLMs Be Trusted as Annotation Judges? A Look into Document Relevance and Consistency](https://medium.com/ordina-data/can-llms-be-trusted-as-annotation-judges-a-look-into-document-relevance-and-consistency-2877975193a9). Читать: Calculating agreement → Results.
@@ -30,3 +31,5 @@ E --> F
 - **[M16](catalog.md#m16) · Справочно · 12 мин.** [AI Skills Need CI/CD Too](https://medium.com/@aradsouza/ai-skills-need-ci-cd-too-c06be3b2c4c9). Читать: Why Compare Against a Baseline Agent?.
 
 Следующая ветка — [Поиск и базы знаний](retrieval.md).
+
+- **[M65](catalog.md#m65) · Углубление · 7 мин.** [An LLM judge is a biased instrument, not a measurement](https://medium.com/@maya.andersson/an-llm-judge-is-a-biased-instrument-not-a-measurement-42f0ca7d304f). Сверь оценки судьи с ручной разметкой и поменяй местами ответы в каждой паре.

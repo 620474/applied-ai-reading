@@ -9,6 +9,7 @@ B --> C["M50 · Replay"]
 C --> D["M52 · Идентичность"]
 D --> E["M53 · Отзыв доступа"]
 E --> F["M56 · Трассы"]
+F --> I["M30 · Онлайн-сравнение выдачи"]
 F --> G["M57 · Нагрузка"]
 G --> H["M59 · Хвост задержки"]
 ```
@@ -30,7 +31,7 @@ G --> H["M59 · Хвост задержки"]
 
 - **[M55](catalog.md#m55) · Справочно · 12 мин.** [OpenTelemetry for LLM Agents: Building Secure, Scalable AI Observability](https://medium.com/beyond-the-algorithm/secure-ai-observability-building-a-production-ready-opentelemetry-stack-for-llm-agents-8476031f7a3e). Читать: Designing the Trace Model for AI Agents.
 - **[M56](catalog.md#m56) · Основная · 28 мин.** [LLM Observability: Traces, Tokens and Costs of Agentic App](https://medium.com/@khwajakhan/llm-observability-traces-tokens-and-cost-on-a-frozen-agentic-app-e0a3b9e2c790). Читать: Datasets & experiments — eval runs with observability context.
-- **[M57](catalog.md#m57) · Основная · 32 мин.** [Building Pinterest’s VLM Serving Stack on NVIDIA Dynamo](https://medium.com/pinterest-engineering/building-pinterests-vlm-serving-stack-on-nvidia-dynamo-0dce6e93d0f3). Читать: Benchmarking Real Multimodal Workloads with AIPerf → Lessons Learned and What’s Next.
+- **[M57](catalog.md#m57) · Углубление · 32 мин.** [Building Pinterest’s VLM Serving Stack on NVIDIA Dynamo](https://medium.com/pinterest-engineering/building-pinterests-vlm-serving-stack-on-nvidia-dynamo-0dce6e93d0f3). Читать: Benchmarking Real Multimodal Workloads with AIPerf → Lessons Learned and What’s Next.
 - **[M58](catalog.md#m58) · Справочно · 15 мин.** [Inference Basics: KV Cache, Batching & Parallelism](https://medium.com/@s09g/inference-basics-kv-cache-batching-parallelism-0c04378d4067). Читать: Why KV Cache is needed → How to estimate KV Cache memory.
 - **[M59](catalog.md#m59) · Углубление · 22 мин.** [Inference Routing on Kubernetes: Six Options Benchmarked](https://medium.com/todea-engineering/inference-routing-on-kubernetes-six-options-benchmarked-c9ad6ac4f3b4). Читать: How we tested → Routing configurations.
 - **[M60](catalog.md#m60) · Углубление · 25 мин.** [What Really Limits LLM Inference Performance?](https://medium.com/data-science-collective/what-really-limits-llm-inference-performance-3d04ae41fe3e). Читать: What I would use in each scenario.
@@ -40,3 +41,5 @@ G --> H["M59 · Хвост задержки"]
 - **[M64](catalog.md#m64) · Углубление · 18 мин.** [Fine-tuning and serving an 11.5B SLM on one H100: how it compares with 11 Foundry models](https://medium.com/@wingnut0310/fine-tuning-and-serving-an-11-5b-slm-on-one-h100-how-it-compares-with-11-foundry-models-ac2d32c3a5e0). Читать: 4. Cost vs. Foundry → Limits.
 
 Вернуться к [выбору специализации](README.md).
+
+- **[M66](catalog.md#m66) · Справочно · 6 мин.** [Semantic Cache: The Math of ‘Close Enough’](https://medium.com/towards-artificial-intelligence/semantic-cache-the-math-of-close-enough-c7dda07dcdc4). Посмотри формулу свежести и ограничения кеша.
